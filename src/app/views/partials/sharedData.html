@@ -1,0 +1,12 @@
+<md-content ng-controller="MemoryController as vm" layout="row">
+
+    <button ng-click="vm.getChartData()">
+  click here to load data
+</button> {{vm.chartData}}
+    <button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+    <span>
+  count: {{count}}
+</span>
+</md-content>
