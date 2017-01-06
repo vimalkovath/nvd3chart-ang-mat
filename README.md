@@ -44,7 +44,7 @@ If you have any questions about the build or project structure please check out 
 
 UI components built with [Angular Material](https://material.angularjs.org/).
 
-inspired from [flatlogic.com](http://flatlogic.com/)
+inspired from [flatlogic.com]
 
 Development by vimalkovath
 

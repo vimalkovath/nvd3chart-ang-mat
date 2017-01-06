@@ -17,10 +17,13 @@
 
         //getting data
         vm.getChartData = function() {
-            sharedDataService.loadAllItems()
+            sharedDataService.loadAllItemsFromCsv()
                 .then(function(chartData) {
-                    console.log("Getting data" + chartData);
+                    // var obj = JSON.parse(chartData);
+                    // vm.chartData = obj;
                     vm.chartData = chartData;
+                    console.log("Getting data" + chartData);
+
                 });
         };
 
