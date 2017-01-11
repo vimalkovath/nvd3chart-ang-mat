@@ -2,11 +2,16 @@
 
     <button ng-click="vm.getChartData()">
   click here to load data
-</button> {{vm.chartData.sex}}
+</button>
     <button ng-click="count = count + 1" ng-init="count=0">
   Increment
 </button>
     <span>
   count: {{count}}
 </span>
+
+    <div ng-repeat="data in vm.chartData.data">
+        <li> {{data.SEX}}</li>
+        <br>
+    </div>
 </md-content>
