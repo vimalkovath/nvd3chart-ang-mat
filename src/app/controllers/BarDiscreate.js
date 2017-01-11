@@ -43,15 +43,11 @@
             .then(function(chartData) {
                 vm.chartData = chartData;
                 console.log("bar chartGetting data" + chartData);
-
-
-                var count = 0;
                 var data = chartData.data;
 
-                vm.calculateSum = function(data) {
+                vm.calculate = function(data) {
                     for (var i = 0; i < data.length; i++) {
                         var Tenure_Range = data[i].Tenure_Range;
-                        console.log("Tenure_Range" + Tenure_Range);
                         if (Tenure_Range == " Less than 10 ") {
                             vm.discreateBarData[0].values[0].value = vm.discreateBarData[0].values[0].value + 2;
                         } //don't forget to add the base 
@@ -67,10 +63,9 @@
                         if (Tenure_Range == " Above25 ") {
                             vm.discreateBarData[0].values[4].value = vm.discreateBarData[0].values[4].value + 1;
                         }
-                        console.log(data[i].Tenure_Range + "Tender count ");
                     }
                 }
-                vm.calculateSum(data);
+                vm.calculate(data);
             });
         //   };
 
