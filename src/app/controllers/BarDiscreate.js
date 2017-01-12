@@ -49,7 +49,7 @@
                     for (var i = 0; i < data.length; i++) {
                         var Tenure_Range = data[i].Tenure_Range;
                         if (Tenure_Range == " Less than 10 ") {
-                            vm.discreateBarData[0].values[0].value = vm.discreateBarData[0].values[0].value + 2;
+                            vm.discreateBarData[0].values[0].value = vm.discreateBarData[0].values[0].value + 1;
                         } //don't forget to add the base 
                         if (Tenure_Range == " 10 to 15 ") {
                             vm.discreateBarData[0].values[1].value = vm.discreateBarData[0].values[1].value + 1;
