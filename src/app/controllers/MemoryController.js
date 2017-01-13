@@ -7,13 +7,10 @@
 
     function MemoryController(sharedDataService) {
 
-
-
-
         var vm = this;
 
         //initializing used variables
-        vm.chart
+        // vm.chart
 
         //getting data
         vm.getChartData = function() {
@@ -22,8 +19,6 @@
                     // var obj = JSON.parse(chartData);
                     // vm.chartData = obj;
                     vm.chartData = chartData;
-                    console.log("Getting data" + chartData);
-
                 });
         };
 

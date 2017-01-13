@@ -153,7 +153,7 @@
 
 
                 function CSVToArray(strData, strDelimiter) {
-                    console.log("inside csv to array");
+                    //     console.log("inside csv to array");
                     // Check to see if the delimiter is defined. If not,
                     // then default to comma.
                     strDelimiter = (strDelimiter || ",");
@@ -209,10 +209,11 @@
 
 
 
-                $http.get('app/components/jsonData/bacys.csv')
+                //     $http.get('app/components/jsonData/bacys.csv')
+                $http.get('app/components/jsonData/bacysOrignal.csv')
                     .success(function(data) {
 
-                        console.log(data);
+                        //        console.log(data);
 
                         var array = CSVToArray(data);
                         var objArray = [];
@@ -229,7 +230,7 @@
                         var str = json.replace(/},/g, "},\r\n");
                         //  var data = str
                         var data = JSON.parse(str);
-                        console.log(data);
+                        //            console.log(data);
                         //return data;
                         deferred.resolve({ data: data });
                     })
@@ -242,7 +243,7 @@
                     });
                 //$log(deferred.promise);
 
-                console.log(deferred.promise);
+                //        console.log(deferred.promise);
 
                 return deferred.promise;
             }

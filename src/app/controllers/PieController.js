@@ -29,7 +29,6 @@
                 // var obj = JSON.parse(chartData);
                 // vm.chartData = obj;
                 vm.chartData = chartData;
-                var count = 0;
                 var data = chartData.data;
 
                 vm.calculateSum = function(data) {
@@ -39,20 +38,15 @@
                                 vm.data[0].y = vm.data[0].y + 1;
                             } //don't forget to add the base 
                             if (sex == 2) {
-                                count = count + 1;
-                                console.log(count)
                                 vm.data[1].y = vm.data[1].y + 1;
                             }
                             if (sex == 3) {
-                                count = count + 1;
-                                console.log(count)
                                 vm.data[2].y = vm.data[2].y + 1;
                             }
-                            console.log(data[i].SEX + "gender count " + count);
                         }
                     }
                     // console.log(count);
-                console.log("Getting chartData" + chartData.data.length);
+                    //   console.log("Getting chartData" + chartData.data.length);
 
                 vm.calculateSum(data);
 

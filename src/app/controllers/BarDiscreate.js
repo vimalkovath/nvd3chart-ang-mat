@@ -34,7 +34,7 @@
             ]
         }];
 
-        console.log("data discreate" + vm.discreateBarData[0].values[0].value);
+        //  console.log("data discreate" + vm.discreateBarData[0].values[0].value);
 
 
         /***  getting data from server/csv and manipulate with chart */
@@ -42,7 +42,6 @@
         sharedDataService.loadAllItemsFromCsv()
             .then(function(chartData) {
                 vm.chartData = chartData;
-                console.log("bar chartGetting data" + chartData);
                 var data = chartData.data;
 
                 vm.calculate = function(data) {
@@ -74,7 +73,7 @@
         //  discreateBarData.push({ key: "vimal", values: vm.barDiscreateServiceReturn });
 
         //  vm.discreateBarData = discreateBarData;
-        console.log(vm.discreateBarData);
+        //console.log(vm.discreateBarData);
 
 
 
