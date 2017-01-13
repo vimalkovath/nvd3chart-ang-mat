@@ -124,22 +124,22 @@
                             (Churn == 0) ? vm.data[0].values[1].value++: vm.data[1].values[1].value++;
                         }
                         if (State == "Pennsylvania") {
-                            (Churn == 0) ? vm.data[0].values[2].value = vm.data[0].values[2].value + 1: vm.data[1].values[2].value = vm.data[1].values[2].value + 1;
+                            (Churn == 0) ? vm.data[0].values[2].value++: vm.data[1].values[2].value++;
                         }
                         if (State == "Massachusetts") {
-                            (Churn == 0) ? vm.data[0].values[3].value++: vm.data[1].values[3].value = vm.data[1].values[3].value + 1;
+                            (Churn == 0) ? vm.data[0].values[3].value++: vm.data[1].values[3].value++;
                         } //don't forget to add the base 
-                        if (State == " Ohio ") {
-                            (Churn == 0) ? vm.data[0].values[4].value = vm.data[0].values[4].value + 1: vm.data[1].values[4].value = vm.data[1].values[4].value + 1;
+                        if (State == "Ohio") {
+                            (Churn == 0) ? vm.data[0].values[4].value++: vm.data[1].values[4].value++;
                         }
-                        if (State == " Arkansas ") {
-                            (Churn == 0) ? vm.data[0].values[4].value = vm.data[0].values[4].value + 1: vm.data[1].values[4].value = vm.data[1].values[4].value + 1;
+                        if (State == "Arkansas") {
+                            (Churn == 0) ? vm.data[0].values[5].value++: vm.data[1].values[5].value++;
                         }
-                        if (State == " New York ") {
-                            (Churn == 0) ? vm.data[0].values[4].value = vm.data[0].values[4].value + 1: vm.data[1].values[4].value = vm.data[1].values[4].value + 1;
+                        if (State == "New York") {
+                            (Churn == 0) ? vm.data[0].values[6].value++: vm.data[1].values[6].value;
                         }
-                        if (State == " Washington ") {
-                            (Churn == 0) ? vm.data[0].values[4].value = vm.data[0].values[4].value + 1: vm.data[1].values[4].value = vm.data[1].values[4].value + 1;
+                        if (State == "Washington") {
+                            (Churn == 0) ? vm.data[0].values[7].value++: vm.data[1].values[7].value++;
                         }
                     }
                 }
