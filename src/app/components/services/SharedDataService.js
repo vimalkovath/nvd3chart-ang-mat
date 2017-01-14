@@ -209,8 +209,8 @@
 
 
 
-                //  $http.get('app/components/jsonData/bacys.csv')
-                $http.get('app/components/jsonData/bacysOrignal.csv')
+                $http.get('app/components/jsonData/bacys.csv')
+                    // $http.get('app/components/jsonData/bacysOrignal.csv')
                     .success(function(data) {
 
                         //        console.log(data);
