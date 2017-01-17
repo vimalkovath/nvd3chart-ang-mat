@@ -1,76 +1,15 @@
 (function() {
     'use strict';
     angular.module('app')
-        .service('sharedDataService', ['dataService',
-            '$q', '$http', '$log', '$rootScope',
-            sharedDataService
+        .service('dataService', [
+            '$q', '$http', '$log',
+            dataService
         ]);
 
-    function sharedDataService(dataService, $q, $http, $log, $rootScope) {
+    function dataService($q, $http, $log) {
 
-        /*var tempData = [];
-           setData: function (key, data) {
-                tempData[key] = data;
-            },
-            getData: function (key) {
-                return tempData[key];
-            },*/
-        var tempData = {};
-        var fullData = {};
 
         return {
-            setData: function(data) {
-
-                console.log("....F..." + fullData.data.length);
-                tempData.data = data;
-                console.log("..T....." + tempData.data.length);
-                console.log("....F..." + fullData.data.length);
-                // $scope.$broadcast("toggleAnimation", this.textToBroadcast);
-                $rootScope.$emit("EmitingData", tempData);
-            },
-            getFullData: function() {
-                return fullData;
-
-            },
-            async: function() {
-                // $http returns a promise, which has a then function, which also returns a promise
-                var promise = tempData;
-                // Return the promise to the controller
-                return promise;
-            },
-            getData: function() {
-                return tempData;
-
-            },
-            loadAll: function() {
-
-                // var a = $q.when(dataService.loadAllItemsFromCsv);
-                // console.log("services a" + a);
-                // this.setData(
-                dataService.loadAllItemsFromCsv()
-                    .then(function(data) {
-                        //    fullData = data;
-
-                        tempData = data;
-                        //                        fullData = data;
-                        console.log(data.data.length + "dataas");
-                        return tempData
-                    }).then(function(data) {
-                        fullData = data;
-
-                        //  tempData = data;
-                        //                        fullData = data;
-                        console.log(data.data.length + "dataas");
-                        return fullData
-                    });
-                //);
-
-
-                //  console.log("services" + a);
-            },
-
-
-
 
             loadAllItems: function() {
                 var deferred = $q.defer();
@@ -292,8 +231,7 @@
                         //  var data = str
                         var data = JSON.parse(str);
                         //            console.log(data);
-                        //return data;   
-
+                        //return data;
                         deferred.resolve({ data: data });
                     })
                     // .then(function(data) {

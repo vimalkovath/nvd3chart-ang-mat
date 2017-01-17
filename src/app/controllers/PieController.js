@@ -1,11 +1,11 @@
 (function() {
     angular
         .module('app')
-        .controller('PieController', ['sharedDataService',
+        .controller('PieController', ['sharedDataService', 'filterFilter',
             PieController
         ]);
 
-    function PieController(sharedDataService) {
+    function PieController(sharedDataService, filterFilter) {
         var vm = this;
 
         vm.data = [{
@@ -83,8 +83,14 @@
                         //     console.log("clicked");
                         // },
                         elementClick: function(e) {
-                            var a;;
-                            console.log("clicked" + e.data.key)
+                            var a = sharedDataService.getFullData();
+                            console.log("clicked" + e.data.key);
+
+                            var FeMale = filterFilter(a.data, { 'SEX': 2 });
+                            var Male = filterFilter(a.data, { 'SEX': 1 });
+
+                            console.log("jjj" + FeMale);
+                            sharedDataService.setData(Male);
                         }
 
                     }

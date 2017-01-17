@@ -116,7 +116,7 @@
                         }
                     }
                     vm.calculate(data);
-                    return [{ values: vm.sin, color: 'rgb(0, 150, 136)', area: true }];
+                    return [{ values: vm.sin, color: 'rgb(0, 150, 136)', area: false }];
                 });
 
         }

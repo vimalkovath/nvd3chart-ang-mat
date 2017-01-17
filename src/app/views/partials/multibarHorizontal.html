@@ -1,8 +1,9 @@
-
-
 <md-content ng-controller="MultiBarHorizontalController as vm" class="md-padding">
+    <!--{{vm.data}}-->
+    <h2>You've got <span class="emphasis">{{getTotalTodos().length}}</span> things to do</h2>
 
-
-        <nvd3 options="vm.options" data="vm.data"></nvd3>
+    <!--<nvd3 options="vm.options" data="vm.data"></nvd3>-->
+    <nvd3 options="vm.options" data="vm.data" config="{refreshDataOnly: false, deepWatchData: true}"></nvd3>
+    <!--vvvv {{data.length}}-->
 
 </md-content>

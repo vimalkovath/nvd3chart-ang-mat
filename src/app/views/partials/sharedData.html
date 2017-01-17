@@ -3,15 +3,31 @@
     <button ng-click="vm.getChartData()">
   click here to load data
 </button>
-    <button ng-click="count = count + 1" ng-init="count=0">
+    <button ng-click="vm.add()">
   Increment
 </button>
     <span>
-  count: {{count}}
+  count: {{vm.count}}
 </span>
 
     <div ng-repeat="data in vm.chartData.data">
         <li> {{data.SEX}}</li>
         <br>
     </div>
+
+
+
+    <button ng-click="onSubmit" ng-class="{stop: run, start: !run}">
+   
+    <!--<button ng-click="run=!run" ng-class="{stop: run, start: !run}">-->
+      <span ng-show="!run">Start</span>
+      <span ng-show="run">Stop</span>
+    </button>
+    <h3>Data Set: {{ dataSet }}</h3>
+
+    <nvd3 options="options" data="data" config="{refreshDataOnly: true}"></nvd3>
+
+    <p>Data: {{ data }}</p>
+
+
 </md-content>
